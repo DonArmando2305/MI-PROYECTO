@@ -1,0 +1,62 @@
+      section {
+        background-color: black;
+        color: white;
+      }
+
+      /*#seccion-1 {
+            background-color: red;
+        }*/
+
+
+        /*Estilos de secciones*/
+      .secciones {
+        background-color: blue;
+      }
+
+      .secciones-letras-amarillas {
+        color: yellow;
+      }
+
+      .secciones-letras-rojas {
+        color: red;
+      }
+
+      .secciones-letras-naranjas {
+        color: orange;
+      }
+
+      /**Estilos para los términos*/
+
+      .estilo-terminos {
+        background-color: rgb(167, 34, 34);
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        margin-right: 50%;
+      }
+
+      .estilo-terminos dt {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+
+      .estilo-terminos-sinonimmos dt {
+        font-style: italic;
+        color: rgb(255, 255, 255);
+      }
+
+      .estilo-terminos-sinonimmos dt:first-of-type {
+        color: black;
+        font-weight: bold;
+      }
+
+        .estilo-terminos-sinonimmos dd {
+            margin-left: 20px;
+            color: rgb(255, 217, 0);
+        }
+
+        .estilo-terminos-sinonimmos dd:first-of-type {
+            color: rgb(0, 0, 0);
+        }
+

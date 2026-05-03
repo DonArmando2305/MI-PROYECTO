@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  --border-radius: 100px;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --verde: #d0ff94;
+  --azul: #1c47ff;
+  --rosa: #d6a3fb;
+  --gris: #e5e5e5;
+  --relleno: 3.125vw;
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--negro);
+  color: var(--blanco);
+  font-size: 20px;
+  font-family: "Syne", sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+/**Navegacion*/
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 45px;
+}
+
+nav ul li a {
+  color: var(--blanco);
+  font-family: "Space Mono", monospace;
+}
+
+/**Acerca de section*/
+
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+  top: 100px;
+  z-index: 2;
+}
+
+section.sticky {
+  position: sticky;
+  margin-top: 100px;
+}
+
+section.full-screen {
+  height: 100vh;
+  top: 0;
+  margin-top: 0;
+  z-index: 3;
+}
+
+section.about .empty {
+  flex-basis: 37.5vw;
+  background: #e5e5e5;
+  border-radius: var(--border-radius);
+}
+
+section.about article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section.about article .title {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  background: var(--azul);
+  border-radius: var(--border-radius);
+  padding: var(--relleno);
+}
+
+section.about article .description {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: var(--rosa);
+  border-radius: var(--border-radius);
+  padding: var(--relleno);
+  color: var(--negro);
+}
+
+/**Servicios section*/
+
+section.service article {
+  display: flex;
+  width: 100%;
+}
+
+section.service figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 56.25vw;
+  margin: 0;
+  background: var(--verde);
+  border-radius: var(--border-radius);
+}
+
+section.service figure img {
+  width: 50%;
+}
+
+section.service .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: #1f1a1c;
+  padding: var(--relleno);
+  border-radius: var(--border-radius);
+}
+
+section.service div.text a {
+  font-family: monospace;
+}
+
+/**Animaciones de Servicios*/
+
+section.service.service-html figure img {
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+}
+
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/** Servicios modificados */
+
+section.service.service-html figure {
+  background: var(--verde);
+}
+
+section.service.service-html .text h2,
+section.service.service-html .text a {
+  color: var(--rosa);
+}
+
+section.service.service-css figure {
+  background: var(--azul);
+}
+
+section.service.service-css .text h2,
+section.service.service-css .text a {
+  color: var(--verde);
+}
+
+section.service.service-js figure {
+  background: var(--rosa);
+}
+section.service.service-js .text h2,
+section.service.service-js .text a {
+  color: var(--azul);
+}
+
+/** Contacto section*/
+
+section.contact {
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    var(--azul),
+    var(--verde) 60%,
+    var(--rosa) 70%,
+    var(--gris)
+  );
+  border-radius: var(--border-radius);
+}
+
+section.contact a {
+  font-size: 4vw;
+  color: var(--negro);
+  font-weight: bold;
+  transition: filter 2s cubic-bezier(.77, .28, .42, 0.93);
+}
+
+section.contact a:hover {
+  filter: blur(20px);
+}
+
+/**Responsive*/
+
+@media only screen and (max-width: 768px) {
+  html, body {
+    --border-radius: 50px;
+    --relleno: 6.25vw;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h1 {
+    font-size: 40px
+  }
+
+  nav ul li {
+    margin-left: 25px;
+  }
+
+  section.about {
+    background: black;
+  }
+
+  section.service article {
+    flex-direction: column;
+  }
+
+  nav {
+    font-size: 16px;
+  
+  }
+
+  nav ul li {
+    margin: 20px;
+  }
+}
